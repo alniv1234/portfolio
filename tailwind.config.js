@@ -23,8 +23,8 @@ module.exports = {
       },
       extend: {
         colors:{
-            'light-primary': '#00FFAB',
-            'light-secondary': '#14C38E',
+            'light-primary': '#A2D9CE ',
+            'light-secondary': '#7EBF9E',
             'light-third': '#B8F1B0',
             'light-fourth': '#E3FCBF',
             'dark-primary': '#000000',

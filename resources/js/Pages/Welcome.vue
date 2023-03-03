@@ -2,6 +2,7 @@
 import { Head, Link } from '@inertiajs/vue3';
 import FrontendLayout from '@/Layouts/Frontend.vue';
 import Hero from '@/Components/Frontend/Hero.vue';
+import About from '@/Components/Frontend/About.vue';
 
 </script>
 
@@ -12,6 +13,7 @@ import Hero from '@/Components/Frontend/Hero.vue';
         <Hero/>
         <!-- Promote third -->
         <!-- About fourth -->
+        <About/>
         <!-- Skills third -->
         <!-- Portfolio -->
         <!-- Contact primary -->
