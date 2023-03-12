@@ -34,6 +34,9 @@
                     </div>
                 </div>
                 <form action="" @submit.prevent="submit" class="space-y-8 w-full max-w-md">
+                    <div class="m-2 p-4 bg-light-secondary text-white" v-if="showMessage">
+                        Thank you for contacting me.
+                    </div>
                     <div>
                         <div>
                             <input type="text" name="" v-model="form.name" class="input" placeholder="Your name">
@@ -63,10 +66,22 @@
         body: "",
     })
 
+    const showMessage = ref(false)
+
+   function setShowMessage(value){
+    showMessage.value = value
+   }
+
+   function cleanForm(){
+    form.reset()
+    setShowMessage(true)
+    setTimeout(()=> setShowMessage(false), 2000)
+   }
+
     const submit =() => {
         form.post(route('contact'), {
             preserveScroll:true,
-            onSuccess: () => form.reset(),
+            onSuccess: () => cleanForm(),
         })
     }
  </script>
