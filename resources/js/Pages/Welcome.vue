@@ -5,6 +5,7 @@ import Hero from '@/Components/Frontend/Hero.vue';
 import About from '@/Components/Frontend/About.vue';
 import Skills from '@/Components/Frontend/Skills.vue';
 import Portfolio from '@/Components/Frontend/Portfolio.vue';
+import Contact from '@/Components/Frontend/Contact.vue';
 
 defineProps({
     skills: Object,
@@ -26,6 +27,7 @@ defineProps({
         <!-- Portfolio -->
         <Portfolio :skills = "skills" :projects="projects"/>
         <!-- Contact primary -->
+        <Contact/>
     </FrontendLayout>
 </template>
 

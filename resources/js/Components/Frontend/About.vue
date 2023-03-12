@@ -1,5 +1,5 @@
 <template>
-    <section id="about" class="bg-light-primary">
+    <section id="about" class="bg-light-primary section">
         <div class="container mx-auto">
             <div class="flex flex-col xl:flex-row gap-24">
                 <img class="object-cover h-full w-[566px] md:mx-auto lg:mx-0 rounded-2xl"

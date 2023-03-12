@@ -1,5 +1,5 @@
 <template>
-    <section id="section" class="bg-light-primary min-h-[1400px]">
+    <section id="section" class="section bg-light-primary">
         <div class="container mx-auto">
             <div class="flex flex-col items-center text-center">
                 <h2 class="text-3xl lg:text-4xl font-medium lg:font-extrabold m-10">My Latest Work</h2>

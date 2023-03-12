@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
@@ -19,7 +20,8 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', [PortfolioController::class, 'portfolio']);
+Route::get('/', [PortfolioController::class, 'portfolio'])->name('portfolio');
+Route::post('contact', ContactController::class)->name('contact');
 
 // Route::get('/dashboard', function () {
 //     return Inertia::render('Dashboard');

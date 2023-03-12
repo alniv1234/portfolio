@@ -23,10 +23,10 @@ module.exports = {
       },
       extend: {
         colors:{
-            'light-primary': '#A2D9CE ',
-            'light-secondary': '#7EBF9E',
-            'light-third': '#B8F1B0',
-            'light-fourth': '#E3FCBF',
+            'light-primary': '#525252 ',
+            'light-secondary': '#414141',
+            'light-third': '#313131',
+            'light-fourth': '#18122B',
             'dark-primary': '#000000',
             'dark-secondary': '#3E432E',
             'dark-third': '#616F39',
