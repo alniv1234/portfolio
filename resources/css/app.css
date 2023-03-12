@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .section{
-    @apply py-12 lg:py-32
+    @apply py-12 lg:py-20
 }
 
 .input{

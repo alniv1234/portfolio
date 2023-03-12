@@ -1,6 +1,6 @@
 <template>
-    <div class="container mx-auto">
-        <nav class="mb-12 border-b-2 border-light-fourth ">
+    <div id="projects" class="container mx-auto">
+        <nav class="mb-12 border-b-2 border-light-fourth">
             <ul class="flex flex-col lg:flex-row justify-evenly items-center">
                 <li class=" cursor-pointer capitalize m-4">
                     <button @click="filterProject('all')" class=" text-center px-4 py-2 hover:text-light-fourth"

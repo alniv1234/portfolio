@@ -1,6 +1,15 @@
 <template>
     <section id="about" class="bg-light-primary section">
-        <div class="container mx-auto">
+        <div class="container mx-auto"
+        v-motion
+            :initial="{
+            opacity: 0,
+            y: 100,
+            }"
+            :visible="{
+            opacity: 1,
+            y: 0,
+            }">
             <div class="flex flex-col xl:flex-row gap-24">
                 <img class="object-cover h-full w-[566px] md:mx-auto lg:mx-0 rounded-2xl"
                     src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"

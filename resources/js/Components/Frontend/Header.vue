@@ -1,10 +1,8 @@
 <template>
 
-<nav class="bg-light-primary border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-dark-primary">
+<nav class="bg-light-primary border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-dark-primary fixed z-30 w-full">
   <div class="container flex flex-wrap items-center justify-between mx-auto">
-    <a href="https://flowbite.com/" class="flex items-center">
-        <img src="https://m.media-amazon.com/images/M/MV5BZjRjOTFkOTktZWUzMi00YzMyLThkMmYtMjEwNmQyNzliYTNmXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_.jpg"
-        class="h-6 rounded-md mr-3 sm:h-9" alt="Flowbite Logo" />
+    <a href="#home" class="flex items-center">
         <span class="self-center text-xl font-semibold whitespace-nowrap text-white">asdasdsad</span>
     </a>
     <button @click="showMobileMenu = !showMobileMenu" data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
@@ -13,20 +11,9 @@
     </button>
     <div class=" w-full md:block md:w-auto" id="navbar-default" :class="{hidden : showMobileMenu}">
       <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0  dark:border-gray-700">
-        <li>
-          <a href="#" class="block py-2 pl-3 pr-4  bg-gray-100 rounded md:bg-transparent  md:p-0 text-white" >Home</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0  text-white">About</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white ">Services</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white md:dark:hover:text-white dark:hover:bg-gray-700 ">Pricing</a>
-        </li>
-        <li>
-          <a href="#" class="block py-2 pl-3 pr-4  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-white md:dark:hover:text-white dark:hover:bg-gray-700 ">Contact</a>
+        <li v-for="(nav, index) in navs" :key="index">
+          <a :href="nav.href" class="block py-2 pl-5 pr-4 hover:text-gray-400 rounded md:p-0 text-white text-lg" >
+            {{nav.name}}</a>
         </li>
       </ul>
     </div>
@@ -36,8 +23,16 @@
 </template>
 
 <script setup>
-    import { ref } from 'vue';
+    import { ref, onMounted } from 'vue';
     const showMobileMenu = ref('false');
+    const scrollBg = ref(false)
+
+    const navs = [
+      {name : "Home", href: "#home"},
+      {name : "About", href: "#about"},
+      {name : "Portfolio", href: "#portfolio"},
+      {name : "Contact", href: "#contact"},
+    ]
 </script>
 
 <style>
